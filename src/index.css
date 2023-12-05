@@ -7,4 +7,12 @@
   display: inline-block;
 }
 
-
+@layer base {
+  html {
+    font-family: 'Inter', 'Noto Sans KR', sans-serif;
+  }
+  
+  .blackItalic {
+    @apply text-2xl italic font-extrabold
+  }
+}
