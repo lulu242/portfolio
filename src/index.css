@@ -19,4 +19,28 @@
   .highlighted {
     @apply bg-[#EFFF8C]
   }
+
+  .visuallyhidden {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    -webkit-clip-path: inset(0px 0px 99.9% 99.9%);
+    clip-path: inset(0px 0px 99.9% 99.9%);
+    overflow: hidden;
+    height: 1px;
+    width: 1px;
+    padding: 0;
+    border: 0;
+  }
+  .show > span {
+  }
+  
+  .show > span > span:first-child {
+    transition: transform 2.5s cubic-bezier(0.19, 1, 0.22, 1) .45s;
+    @apply translate-y-0
+  }
+  .show > span > span:last-child {
+    transition: width 2s cubic-bezier(0.19, 1, 0.22, 1) .45s;
+    @apply w-full
+  }
+
 }
