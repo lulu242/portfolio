@@ -3,7 +3,7 @@ import { Link } from 'react-scroll';
 
 interface NavListProps {
   isNavActive: boolean;
-  setIsNavActive: React.Dispatch<React.SetStateAction<boolean>>;
+  setIsNavActive?: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const NavList: FC<NavListProps> = React.memo(
@@ -19,7 +19,7 @@ const NavList: FC<NavListProps> = React.memo(
         {navLists.map(({to, value}) => (
           <li className="cursor-pointer hover:text-gray-600">
             <Link
-              onClick={() => setIsNavActive(!isNavActive)}
+              onClick={() => {if (setIsNavActive) setIsNavActive(!isNavActive) }}
               activeClass="underline decoration-solid"
               spy={true}
               to={to}

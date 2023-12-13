@@ -9,18 +9,18 @@ export const Nav: FC = () => {
       {/* 데스크탑 버전 */}
       <nav className="hidden md:block md:fixed md:z-50 md:w-full md:p-5">
         <ul className="flex justify-end blackItalic gap-7">
-          <NavList isNavActive={isNavActive} setIsNavActive={setIsNavActive} />
+          <NavList isNavActive={isNavActive} />
         </ul>
       </nav>
 
       {/* 모바일 버전 */}
       <nav className="fixed z-50 w-full p-5 md:hidden">
-        <div
+        <button 
           className="relative z-40 flex items-center justify-center w-10 h-10 rounded-full highlighted"
           onClick={() => setIsNavActive(!isNavActive)}
         >
           <span className="text-2xl font-semibold material-icons">{isNavActive ? 'close':'menu'}</span>
-        </div>
+        </button>
         {isNavActive && (
           <div className="absolute inset-0 w-full h-screen bg-white/90">
             <ul className="flex flex-col items-center justify-center h-full gap-10 blackItalic">
