@@ -11,9 +11,13 @@ const Hero = () => {
         PORTFOLIO
       </h1>
       <div className="w-[150vw] animate-flow absolute top-1/2">
-        <div className="flex items-center overflow-hidden rotate-[15deg] h-[80vh] w-[150vw]">
+        <div className="overflow-hidden rotate-[15deg] h-[80vh] w-[150vw]">
           <div className="w-full h-full bg-cover bg-hero-pattern"></div>
-          {/* <div className="w-full h-full bg-cover bg-hero-pattern"></div> */}
+        </div>
+      </div>
+      <div className="w-[150vw] animate-flowDelay absolute top-1/2">
+        <div className="overflow-hidden rotate-[15deg] h-[80vh] w-[150vw]">
+          <div className="w-[90%] h-full bg-cover bg-hero-pattern"></div>
         </div>
       </div>
     </section>
