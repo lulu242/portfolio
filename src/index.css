@@ -11,14 +11,21 @@
   html {
     font-family: 'Inter', 'Noto Sans KR', sans-serif;
   }
+  
+  .highlighted {
+    @apply bg-[#EFFF8C]
+  }
 
+  p {
+    @apply mb-5
+  }
+  p > span {
+    @apply  font-semibold bg-pink-100
+  }
   .blackItalic {
     @apply text-2xl italic font-extrabold
   }
 
-  .highlighted {
-    @apply bg-[#EFFF8C]
-  }
 
   .visuallyhidden {
     position: absolute;
@@ -31,16 +38,19 @@
     padding: 0;
     border: 0;
   }
-  .show > span {
-  }
-  
+
+  /* 스크롤 Title 애니메이션 */
   .show > span > span:first-child {
-    transition: transform 2.5s cubic-bezier(0.19, 1, 0.22, 1) .45s;
+    transition: transform 2.5s cubic-bezier(0.19, 1, 0.22, 1) .3s;
     @apply translate-y-0
   }
   .show > span > span:last-child {
-    transition: width 2s cubic-bezier(0.19, 1, 0.22, 1) .45s;
+    transition: width 2s cubic-bezier(0.19, 1, 0.22, 1) .3s;
     @apply w-full
   }
 
+  /* 스크롤 aboutText 이벤트 */
+  #aboutText {
+    transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1);
+  }
 }
